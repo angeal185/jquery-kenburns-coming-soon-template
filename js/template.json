@@ -1,0 +1,237 @@
+﻿var mainData = [
+    {
+	'title1':'Logo Here',
+	'title2':'Home',
+	'title3':'Features',
+	'title4':'Gallery',
+	'title5':'Team',
+	'title6':'Contact'
+	}	
+];
+
+var mainTransform =
+{"<>":"header","html":[
+    {"<>":"div","class":"app-overlay app-overlay-color","html":""},
+    {"<>":"nav","id":"nav","html":""},
+    {"<>":"div","class":"container","html":[
+        {"<>":"div","class":"row","html":[
+            {"<>":"div","class":"col-sm-6 col-sm-push-6 app-socials","html":[
+                {"<>":"ul","id":"social","html":""}
+              ]},
+            {"<>":"div","class":"col-sm-6 col-sm-pull-6 app-logo","html":[
+                {"<>":"h2","html":"${title1}"}
+              ]}
+          ]},
+        {"<>":"div","class":"app-changer","html":[
+            {"<>":"div","id":"home","class":"active","html":[
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","class":"col-xs-12 app-title","html":[
+                        {"<>":"div","html":[
+                            {"<>":"h2","html":"${title2}"},
+                            {"<>":"div","class":"rotate","html":[
+                                {"<>":"ul","id":"texts","class":"texts","html":""}
+                              ]}
+                          ]}
+                      ]}
+                  ]},
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","class":"col-xs-12 app-title-paragraph","html":[
+                        {"<>":"p","class":"loriem","html":""}
+                      ]}
+                  ]}
+              ]},
+            {"<>":"div","id":"features","class":"subpage","html":[
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","id":"featureIcon","class":"col-sm-6","html":[
+                        {"<>":"h2","html":"${title3}"},
+                        {"<>":"p","class":"loriem","html":""},
+                        {"<>":"ul","id":"feature","html":""}
+                      ]}
+                  ]}
+              ]},
+            {"<>":"div","id":"gallery","class":"subpage clearfix","html":[
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","class":"col-sm-12","html":[
+                        {"<>":"h2","html":"${title4}"},
+                        {"<>":"div","id":"grid","class":"grid","html":""}
+                      ]}
+                  ]}
+              ]},
+            {"<>":"div","id":"team","class":"subpage","html":[
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","class":"col-sm-12","html":[
+                        {"<>":"h2","html":"${title5}"},
+                        {"<>":"p","class":"loriem","html":""}
+                      ]}
+                  ]},
+                {"<>":"div","id":"members","class":"row","html":""}
+              ]},
+            {"<>":"div","id":"contact","class":"subpage","html":[
+                {"<>":"div","class":"row","html":[
+                    {"<>":"div","class":"col-md-12","html":[
+                        {"<>":"h2","html":"${title6}"},
+                        {"<>":"p","class":"loriem","html":""},
+                        [
+						  {"<>":"label","for":"","html":""},
+                          {"<>":"input","type":"text","value":"","html":""},
+						  {"<>":"label","for":"","html":""},
+                          {"<>":"input","type":"text","value":"","html":""},
+						  {"<>":"label","for":"","html":""},
+                          {"<>":"textarea","html":""},
+                          {"<>":"button","type":"submit","html":"Submit"}
+                        ]
+                      ]}
+                  ]}
+              ]}
+          ]}
+      ]},
+    {"<>":"div","class":"app-background","id":"element","html":""}
+  ]};
+
+var navData = [
+    {'name':'home','class':'active','icon':'dashboard','label':'Home'},
+    {'name':'features','class':'','icon':'flask','label':'Features'},
+    {'name':'gallery','class':'','icon':'photo','label':'Gallery'},
+    {'name':'team','class':'','icon':'user','label':'Team'},
+	{'name':'contact','class':'','icon':'paper-plane','label':'Contact'}
+];
+
+
+
+var navTransform =
+{"<>":"a","href":"#${name}","class":"${class}","html":[
+    {"<>":"i","class":"fa fa-${icon}","html":""},
+    {"<>":"span","html":"${label}"},
+    {"<>":"i","class":"fa fa-chevron-right","style":"float:right","html":""}
+  ]};
+
+var socialData = [
+    {'icon':'facebook','href':'#'},
+    {'icon':'twitter','href':'#'},
+	{'icon':'linkedin','href':'#'},
+	{'icon':'github','href':'#'},
+	{'icon':'codepen','href':'#'}
+];
+
+var socialTransform =  
+{"<>":"li","html":[
+    {"<>":"a","class":"fa fa-${icon}","href":"${href}","html":""}
+  ]};
+
+var textsData = [
+    {'class':'ipsum','html':''},
+    {'class':'ipsum','html':''},
+	{'class':'ipsum','html':''},
+	{'class':'ipsum','html':''},
+	{'class':'ipsum','html':''},
+	{'class':'ipsum','html':''},
+];
+
+var textsTransform =   
+{"<>":"li","class":"${class}","html":"${html}"}
+
+var featuresData = [
+    {'class1':'ipsum','class2':'loriem','html1':'','html2':''},
+    {'class1':'ipsum','class2':'loriem','html1':'','html2':''},
+	{'class1':'ipsum','class2':'loriem','html1':'','html2':''},
+	{'class1':'ipsum','class2':'loriem','html1':'','html2':''},
+	{'class1':'ipsum','class2':'loriem','html1':'','html2':''},
+	{'class1':'ipsum','class2':'loriem','html1':'','html2':''}
+];
+
+var featuresTransform = 
+{"<>":"li","html":[
+    {"<>":"span","class":"${class1}","html":"${html1}"},
+    {"<>":"p","class":"${class2}","html":"${html2}"}
+  ]};
+
+var featureIconData = [
+    {'icon':'html5'},
+	{'icon':'css3'},
+	{'icon':'firefox'},
+	{'icon':'chrome'},
+	{'icon':'edge'}
+];
+
+var featureIconTransform =  
+{"<>":"i","class":"fa fa-2x fa-${icon}","html":""};
+
+var gridData = [
+    {'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+	{'href':'gallery-1','src':'gallery-1'},
+];
+
+var gridTransform = 
+{"<>":"a","href":"img/${href}.jpg","class":"grid-item","html":[
+    {"<>":"img","src":"img/${src}.jpg","html":""}
+  ]};
+
+var membersData = [
+    {'src':'team-1','name':'Name 1','info':'','href':'#','hrefb':'#'},
+	{'src':'team-1','name':'Name 2','info':'','href':'#','hrefb':'#'},
+	{'src':'team-1','name':'Name 3','info':'','href':'#','hrefb':'#'},
+	{'src':'team-1','name':'Name 4','info':'','href':'#','hrefb':'#'},
+	{'src':'team-1','name':'Name 5','info':'','href':'#','hrefb':'#'},
+	{'src':'team-1','name':'Name 6','info':'','href':'#','hrefb':'#'}
+];
+  
+var membersTransform =  
+{"<>":"div","class":"col-sm-6","html":[
+    {"<>":"figure","html":[
+        {"<>":"img","src":"img/${src}.jpg","html":""},
+        {"<>":"figcaption","html":[
+            {"<>":"h3","html":"${name}"},
+            {"<>":"span","class":"ipsum","html":"${info}"},
+            {"<>":"div","class":"team-socials","html":[
+                {"<>":"a","href":"${href}","html":[
+                    {"<>":"i","class":"fa fa-facebook","html":""}
+                  ]},
+                {"<>":"a","href":"${hrefb}","html":[
+                    {"<>":"i","class":"fa fa-twitter","html":""}
+                  ]}
+              ]}
+          ]}
+      ]}
+  ]};
+
+var bgData = [
+    {'img':'bg'},
+	{'img':'bg'},
+	{'img':'bg'}
+];
+
+var bgTransform =   
+{"<>":"img","src":"img/${img}.jpg","html":""};
+
+var footerData = [
+    {'percent':'50','date':'2016','name':'ben eaves'}
+];
+
+var footerTransform = 
+{"<>":"footer","html":[
+    {"<>":"div","class":"container","html":[
+        {"<>":"div","class":"row","html":[
+            {"<>":"div","class":"col-sm-6 app-progress","html":[
+                {"<>":"span","class":"hidden-xs","html":"progress: ${percent}%"},
+                {"<>":"div","class":"app-progress-bar","html":[
+                    {"<>":"div","class":"filler","style":"width: ${percent}%","html":""}
+                  ]}
+              ]},
+            {"<>":"div","class":"col-sm-6 app-footer-copyrights","html":[
+                {"<>":"p","html":[
+                    {"<>":"a","href":"#","target":"_blank","html":"${date} ${name}"}
+                  ]}
+              ]}
+          ]}
+      ]}
+  ]}
