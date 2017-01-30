@@ -1,0 +1,1 @@
+# jquery-kenburns-coming-soon-template
